@@ -1,0 +1,1 @@
+INSERT INTO "user"  ("username", "password") VALUES ('Chileshe', 12345678)
