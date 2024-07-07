@@ -1,17 +1,17 @@
-version: 'latest'
-volumes:
-  postgress:
+version: '3.8'
+
 services:
   project-db:
     image: 'postgres:latest'
-    container_name: 'cursive-alpha'
-    restart: always
     environment:
-      - 'POSTGRES_USER=admin'
-      - 'POSTGRES_PASSWORD=admin'
-      - 'POSTGRES_HOST_AUTH_METHOD=trust'
-      - 'POSTGRES_DB=project'
-    volumes:
-      - postgress:/var/lib/postgresql/data
+      POSTGRES_USER: abraham
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: project
+      POSTGRES_HOST_AUTH_METHOD: md5
     ports:
-      - "127.0.0.1:5432:5432"
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
