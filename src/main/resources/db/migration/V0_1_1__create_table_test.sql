@@ -29,4 +29,3 @@ ALTER TABLE node
     ADD CONSTRAINT FK7fi376i6naekbnkmnf3pmchyk FOREIGN KEY (user_id) REFERENCES "user" (id) ON DELETE NO ACTION;
 
 
-

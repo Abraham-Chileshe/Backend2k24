@@ -13,4 +13,5 @@ import java.util.Optional;
 @Repository
 public interface NodeRepository extends JpaRepository<Node, Long> {
     Optional<Node> findById_User_IdAndId_Id(Long id, Long id1);
+
 }
